@@ -1,0 +1,327 @@
+<% include ./partials/header %>
+
+<!-- JUMBOTRON  --------------------------------------------------->
+    <div class="jumbotron" id="jumbo2">
+      <div class="img-fluid" id="jumbo2_img">
+        <div class="container content p-4 py-5" id="jumbo2_content">
+          <h1 class="display-1">Jhm Schedule</h1>
+          <h4 class="display-4">Be there or be square!</h4>
+          <hr class="my-4">
+          <h4 class="display-4">Download Spring and Summer calendars below!</h4>
+          <div class="px-5">
+            <a class="btn btn-primary btn-md mr-4 px-3" target="blank" href="/pdfs/JH_cal_spring_2019.pdf" role="button">Spring</a>
+            <a class="btn btn-primary btn-md ml-4" target="blank" href="/pdfs/JHM_cal_summer_2019_legal.pdf"role="button">Summer</a>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <!-- UPCOMING EVENTS CARDS --------------------------------------->
+    <div class="row">
+        <!-- left margin -->
+        <div class="col-sm-1 col-lg-2"></div>
+        <!-- center content -->
+        <div class="col-sm-10 col-lg-8">
+          <div class="container">
+            <h2 class="display-2 mt-3" style="background: #E0CDB5; text-align: center; border-radius: 40px;">Upcoming Events</h2>
+            <!-- row for cards -->
+            <div class="row my-4 no-gutters">
+                <!-- card 1 -->
+                <div class="col-4">
+                    <div class="card rounded-circle cal_card shadow-sm" id="event1">
+                      <div class="card-body d-flex flex-column justify-content-center">
+                        <h2 class="display-2 card-title">03</h2>
+                        <p class="card-subtitle">April</p>
+                        <p class="card-text">Core Group Night In</p>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="col-4">
+                    <div class="card rounded-circle cal_card shadow-sm" id="event2">
+                      <div class="card-body d-flex flex-column justify-content-center">
+                        <h2 class="display-2 card-title">5-6</h2>
+                        <p class="card-subtitle">April</p>
+                        <p class="card-text">Twenty-Four Retreat</p>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="col-4">
+                    <div class="card rounded-circle cal_card shadow-sm" id="event3">
+                      <div class="card-body d-flex flex-column justify-content-center">
+                        <h2 class="display-2 card-title">10</h2>
+                        <p class="card-subtitle">April</p>
+                        <p class="card-text">JHM <br>Lip-Sync</p>
+                      </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <h2 class="display-2 mt-3" style="background: #E0CDB5; text-align: center; border-radius: 40px;">Event List</h2>
+
+            <!-- ACCORDION SCEDULE --------------------------------------------------------------------->
+            <div class="accordion my-4 shadow-sm" id="accordionExample">
+              <!-- APRIL -->
+              <div class="card accordion_link" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="card-header" id="headingOne">
+                  <h3 class="display-3 mb-0 d-flex justify-content-center">April
+                  </h3>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body accordion_body">
+                      <!-- row 1 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Sunday:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>07: <br> JHM</p>
+                        <p>14: <br> JHM</p>
+                        <p>21: <br> NO JHM (family sunday)</p>
+                        <p>28: <br> JHM</p>
+                      </div>
+                    </div>
+
+                    <!-- row 2 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"
+                        id="small_show"><strong>Weds: </strong></p>
+                        <p id = "large_show" class="text-center"><strong>Wednesdays: </strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around align-items-center">
+                        <p>03: <br> Core Group Night In</p>
+                        <p>10: <br> Lip Sync</p>
+                        <p>17: <br> JHM</p>
+                        <p>24: <br> JHM</p>
+                      </div>
+                    </div>
+                    <!-- row 3 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Events:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>05-06: <br> Twenty-Four Retreat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MAY -->
+              <div class="card accordion_link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div class="card-header" id="headingTwo">
+                  <h3 class=" display-3 mb-0 d-flex justify-content-center">May
+                  </h3>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body accordion_body">
+                     <!--row 1 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Sunday:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>05: <br> JHM & Parent Info Mtg</p>
+                        <p>12: <br> JHM</p>
+                        <p>19: <br> JHM & 8th Send Off</p>
+                        <p>26: <br> NO JHM (family sunday)</p>
+                      </div>
+                    </div>
+
+                     <!--row 2 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"
+                        id="small_show"><strong>Weds: </strong></p>
+                        <p id = "large_show" class="text-center"><strong>Wednesdays: </strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around align-items-center">
+                        <p>01: <br> JHM</p> 
+                        <p>08: <br> JHM</p>
+                        <p>15: <br> JHM</p>
+                        <p>22: <br> NO JHM</p>
+                        <p>29: <br> NO JHM</p>
+                      </div>
+                    </div>
+                     <!--row 3 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Events:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>18:<br> 8th Grade Graduation & Roots Celebration</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <!--JUNE -->
+              <div class="card accordion_link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <div class="card-header" id="headingThree">
+                  <h3 class="display-3 mb-0 d-flex justify-content-center">June
+                  </h3>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body accordion_body">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Sunday:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>02: <br> Kick-Off & Baptism & Park Day</p>
+                        <p>09: <br> JHM</p>
+                        <p>16: <br> JHM</p>
+                        <p>23: <br> Hume Sunday</p>
+                        <p>30: <br> JHM with HSM</p> 
+                      </div>
+                    </div>
+
+                     <!--row 2 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"
+                        id="small_show"><strong>Weds: </strong></p>
+                        <p id = "large_show" class="text-center"><strong>Wednesdays: </strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around align-items-center">
+                        <p>05: <br> JHM Camp-Out Kick Off</p>
+                        <p>12: <br> JHM Camelot</p>
+                        <p>19: <br> JHM Karaoke</p>
+                        <p>26: <br> NO JHM</p>
+                      </div>
+                    </div>
+                     <!--row 3 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Events:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>17-18: <br> 7th grade Shenanigans</p>
+                        <p>23-29: <br> Hume Lake</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <!--JULY -->
+              <div class="card accordion_link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <div class="card-header" id="headingFour">
+                  <h3 class="display-3 mb-0 d-flex justify-content-center">July
+                  </h3>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body accordion_body">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Sunday:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>07: <br> JHM</p>
+                        <p>14: <br> JHM</p>
+                        <p>21: <br> JHM</p>
+                        <p>28: <br> JHM</p> 
+                      </div>
+                    </div>
+
+                     <!--row 2 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"
+                        id="small_show"><strong>Weds: </strong></p>
+                        <p id = "large_show" class="text-center"><strong>Wednesdays: </strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around align-items-center">
+                        <p>03: <br> NO JHM</p>
+                        <p>10: <br> NO JHM</p>
+                        <p>17: <br> JHM Pool Party</p>
+                        <p>24: <br> JHM N.O.W.</p>
+                        <p>31: <br> Movie Night</p>
+                      </div>
+                    </div>
+                     <!--row 3 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Events:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>01-06: <br>Siesta</p>
+                        <p>08-11: <br> VBS</p>
+                        <p>12: <br> JHM Beach Day</p>
+                        <p>15-19: <br> Trek</p>
+                        <p>27-8/3: <br> Rise/ Rainbow Express</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <!--AUGUST -->
+              <div class="card accordion_link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <div class="card-header" id="headingFive">
+                  <h3 class="display-3 mb-0 d-flex justify-content-center">August
+                  </h3>
+                </div>
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                  <div class="card-body accordion_body">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Sunday:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>04: <br> JHM</p>
+                        <p>11: <br> JHM</p>
+                        <p>18: <br> Family Sunday</p>
+                        <p>25: <br> Fall Kick-Off & Beach Baptism</p> 
+                      </div>
+                    </div>
+
+                     <!--row 2 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"
+                        id="small_show"><strong>Weds: </strong></p>
+                        <p id = "large_show" class="text-center"><strong>Wednesdays: </strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around align-items-center">
+                        <p>07: <br> Summer Share Night</p>
+                        <p>14: <br> NO JHM</p>
+                        <p>21: <br> NO JHM</p>
+                        <p>28: <br> JHM</p>
+                      </div>
+                    </div>
+                     <!--row 3 -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-3">
+                        <p class="text-center"><strong>Events:</strong></p>
+                      </div>
+                      <div class="col-9 d-flex flex-row justify-content-around px-5 align-items-center">
+                        <p>7/27-8/3: <br> Rise/ Rainbow Express</p>
+                        <p>09: <br> JHM Beach Day</p>
+                        <p>30-31: <br> Champions Camp Out</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right margin -->
+        <div class="col-sm-1 col-lg-2"></div>
+    </div>
+
+
+
+
+<% include ./partials/footer %>

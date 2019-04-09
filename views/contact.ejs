@@ -1,0 +1,95 @@
+<% include ./partials/header %>
+
+<!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid" id="jumbo4">
+        <div class="img-fluid" id="jumbo4_img">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        	<!-- CONTACT CARDS -->
+        	<div class="col-10 col-sm-12 col-lg-8">
+        		<h2 class="display-2 text-center mb-4" style="background: #E0CDB5; text-align: center; border-radius: 40px;">Contact Us</h2>
+        		<div class="row">
+        			<div class="col-sm-6 mb-4">
+                        <div class="card shadow-sm contact_card">
+                          <img class="card-img-top mx-auto rounded-circle mt-3" src="/images/kody.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-text display-4">Kody Stavert</h4>
+                            <h5>Jr. High Shepherd</h5>
+                            <p><a href="tel:714-922-6184">(714) 922-6184</a></p>
+                            <a href="mailto: kody.stavert@evfreefullerton.com">
+                                <button type="button" class="btn btn-outline-primary">E-mail</button>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+
+        			<div class="col-sm-6 mb-4">
+                        <div class="card shadow-sm contact_card">
+                          <img class="card-img-top mx-auto rounded-circle mt-3" src="/images/becca.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-text display-4">Becca Stavert</h4>
+                            <h5>Jr. High Shepherd</h5>
+                            <p><a href="tel:714-488-9284">(714) 488-9284</a></p>
+                            <a href="mailto: becca.stavert@evfreefullerton.com">
+                                <button type="button" class="btn btn-outline-primary">E-mail</button>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+
+        			<div class="col-sm-6 mb-4">
+                        <div class="card shadow-sm contact_card">
+                          <img class="card-img-top mx-auto rounded-circle mt-3" src="/images/pic11.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-text display-4">Kate Walsh</h4>
+                            <h5>Jr. High Director</h5>
+                            <a href="mailto: kate.walsh@evfreefullerton.com">
+                                <button type="button" class="btn btn-outline-primary">E-mail</button>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+
+        			<div class="col-sm-6 mb-4">
+                        <div class="card shadow-sm contact_card">
+                          <img class="card-img-top mx-auto rounded-circle mt-3" src="/images/pic11.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-text display-4">Miriam Mohler</h4>
+                            <h5>Heritage Ministries Assistant</h5>
+                            <p><a href="tel:714-257-4361">(714) 257-4361</a></p>
+                            <a href="mailto: miriam.mohler@evfreefullerton.com">
+                                <button type="button" class="btn btn-outline-primary">E-mail</button>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+        		</div>
+        	</div>
+        	<!-- PRAYER REQUEST FORM -->
+        	<div class="col-lg-4 pb-4">
+        		<!-- <h2 class="display-2 text-center">Prayer</h2> -->
+                <div class="card mb-3 h-100" style="border-radius: 40px;">
+                  <img src="/images/prayer.jpg" class="card-img-top" id = "prayer" alt="..." style="width: 100%">
+                  <div class="card-body">
+                    <form method = "post" action = "send">
+                      <div class="form-group">
+                        <%- messages('message', locals) %>
+                        <label for="exampleFormControlInput1"><h4 class="display-4">Name</h4></label>
+                        <input type="text" name = 'name' class="form-control" id="exampleFormControlInput1" placeholder="(optional)">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1"><h4 class="display-4">Prayer Requests</h4></label>
+                        <textarea class="form-control" name = 'request' id="exampleFormControlTextarea1" rows="16"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+
+
+<% include ./partials/footer %>
