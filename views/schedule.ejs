@@ -15,6 +15,7 @@
         </div> 
       </div>
     </div>
+    
 
     <!-- UPCOMING EVENTS CARDS --------------------------------------->
     <div class="row">
@@ -24,15 +25,53 @@
         <div class="col-sm-10 col-lg-8">
           <div class="container">
             <h2 class="display-2 mt-3" style="background: #E0CDB5; text-align: center; border-radius: 40px;">Upcoming Events</h2>
+            
+            <!--UPCOMING EVENT DISPLAY LOGIC------------------------------------------------------------------------->
+            <%var date = new Date();
+              var todaysDate = date.getUTCDate();
+              var todaysMonth = date.getMonth(); %>
+            <% const monthNames = ["January", "February", "March", "April", "May", "June", 
+             "July", "August", "September", "October", "November", "December"
+             ];%>
+            <% var upcomingEvents = [] %>
+            
+            <!--THIS IS OUR UPCOMING EVENTS FUNCTION-->
+            
+             <!--cycle through events collection-->
+            <% events.forEach(function(event) { 
+              // convert event month into a number
+              var eventMonth = monthNames.indexOf(event.month);
+              // check for hyphenated dates
+                if (event.date.length > 2) {
+                    // split dates by hyphen
+                    var split = event.date.split("-");
+                    // keep the last date, take last element in array
+                    var eventDate = Number(split[split.length-1]);
+                }
+                else {
+                // convert day to number
+                var eventDate = Number(event.date);
+                }
+                
+                // check if event day is > than todays day or event month > todays month
+                if (eventDate > todaysDate || eventMonth > todaysMonth) {
+                   // add to upcomingEvents array
+                    upcomingEvents.push(event);
+                }
+              }) %>
+              
+              <!--END UPCOMING EVENTS LOGIC ---------------------------------------------------------------------->
+              
+              
             <!-- row for cards -->
             <div class="row my-4 no-gutters">
                 <!-- card 1 -->
                 <div class="col-4">
                     <div class="card rounded-circle cal_card shadow-sm" id="event1">
                       <div class="card-body d-flex flex-column justify-content-center">
-                        <h2 class="display-2 card-title">03</h2>
-                        <p class="card-subtitle">April</p>
-                        <p class="card-text">Core Group Night In</p>
+                        <h2 class="display-2 card-title"><%= upcomingEvents[0].date %></h2>
+                        <p class="card-subtitle"><%= upcomingEvents[0].month %></p>
+                        <p class="card-text"><%= upcomingEvents[0].name %></p>
                       </div>
                     </div>
                 </div>
@@ -41,9 +80,9 @@
                 <div class="col-4">
                     <div class="card rounded-circle cal_card shadow-sm" id="event2">
                       <div class="card-body d-flex flex-column justify-content-center">
-                        <h2 class="display-2 card-title">5-6</h2>
-                        <p class="card-subtitle">April</p>
-                        <p class="card-text">Twenty-Four Retreat</p>
+                        <h2 class="display-2 card-title"><%= upcomingEvents[1].date %></h2>
+                        <p class="card-subtitle"><%= upcomingEvents[1].month %></p>
+                        <p class="card-text"><%= upcomingEvents[1].name %></p>
                       </div>
                     </div>
                 </div>
@@ -52,9 +91,9 @@
                 <div class="col-4">
                     <div class="card rounded-circle cal_card shadow-sm" id="event3">
                       <div class="card-body d-flex flex-column justify-content-center">
-                        <h2 class="display-2 card-title">10</h2>
-                        <p class="card-subtitle">April</p>
-                        <p class="card-text">JHM <br>Lip-Sync</p>
+                        <h2 class="display-2 card-title"><%= upcomingEvents[2].date %></h2>
+                        <p class="card-subtitle"><%= upcomingEvents[2].month %></p>
+                        <p class="card-text"><%= upcomingEvents[2].name %></p>
                       </div>
                     </div>
                 </div>

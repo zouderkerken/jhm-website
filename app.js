@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+mongoose.connect('mongodb://localhost/events');
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const expressValidator = require("express-validator");
@@ -13,6 +15,15 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+var eventSchema = new mongoose.Schema({
+  date: String,
+  month: String,
+  name: String,
+});
+
+var Event = mongoose.model("Event", eventSchema);
+
+// ALERT FUNCTIONALITY -------------------------------------------------
 // Express Session Middleware
 app.use(session({
   secret: 'keyboard cat',
@@ -47,18 +58,27 @@ app.use(expressValidator({
 
 
 
-// ROUTES
+// ROUTES ------------------------------------------------------------------------------------------------------------
 app.get("/", function(req, res) {
     res.render("home");
 })
 
-app.get("/resources", function(req, res) {
-    res.render("resources");
-})
-
 app.get("/schedule", function(req, res) {
-    res.render("schedule");
-})
+  // get all events from db
+    Event.find({}, function(err, events) {
+      if (err) {
+      console.log(err);
+      }
+    else {
+      res.render("schedule", {events: events});
+    }
+  });
+});
+
+app.get("/resources", function(req, res) {
+      res.render("resources");
+    })
+
 
 app.get("/media", function(req, res) {
     res.render("media");
