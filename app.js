@@ -116,7 +116,7 @@ app.post('/send', function(req, res) {
       // setup email data with unicode symbols
     let mailOptions = {
       from: '"JHM LEADERS" <zouderkerken@gmail.com>', // sender address
-      to: 'zouderkerken@gmail.com', // list of receivers
+      to: ['zouderkerken@gmail.com', 'kody.stavert@evfreefullerton.com', 'becca.stavert@evfreefullerton.com', 'kate.walsh@evfreefullerton.com'], // list of receivers
       subject: 'New Prayer Request', // Subject line
       text: '', // plain text body
       html: output // html body
