@@ -115,7 +115,7 @@
                   }
                   
                   // check if event month >= todays month
-                  if (eventMonth == todaysMonth && eventDate >= (todaysDate-1)) {
+                  if (eventMonth == todaysMonth && eventDate >= todaysDate) {
                       upcomingEvents.push(event);
                   }
                   else if (eventMonth > todaysMonth) {
