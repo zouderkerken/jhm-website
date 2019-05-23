@@ -100,26 +100,29 @@
             
              <!--cycle through events collection-->
             <% events.forEach(function(event) { 
-              // convert event month into a number
-              var eventMonth = monthNames.indexOf(event.month);
-              // check for hyphenated dates
-                if (event.date.length > 2) {
-                    // split dates by hyphen
-                    var split = event.date.split("-");
-                    // keep the last date, take last element in array
-                    var eventDate = Number(split[split.length-1]);
-                }
-                else {
-                // convert day to number
-                var eventDate = Number(event.date);
-                }
-                
-                // check if event day is > than todays day or event month > todays month
-                if (eventDate > todaysDate && eventMonth >= todaysMonth) {
-                   // add to upcomingEvents array
+                // convert event month into a number
+                var eventMonth = monthNames.indexOf(event.month);
+                // check for hyphenated dates
+                  if (event.date.length > 2) {
+                      // split dates by hyphen
+                      var split = event.date.split("-");
+                      // keep the last date, take last element in array
+                      var eventDate = Number(split[split.length-1]);
+                  }
+                  else {
+                  // convert day to number
+                  var eventDate = Number(event.date);
+                  }
+                  
+                  // check if event month >= todays month
+                  if (eventMonth == todaysMonth && eventDate >= (todaysDate-1)) {
+                      upcomingEvents.push(event);
+                  }
+                  else if (eventMonth > todaysMonth) {
                     upcomingEvents.push(event);
-                }
-              }) %>
+                  }
+              }); 
+              console.log(upcomingEvents)%>
               
               <!--END UPCOMING EVENTS LOGIC ---------------------------------------------------------------------->
               
