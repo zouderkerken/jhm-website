@@ -12,7 +12,7 @@ const session = require("express-session");
 //keep from sleeping
 var http = require("http");
 setInterval(function() {
-    http.get("http://http://www.evfreejhm.com/");
+    http.get("http://www.evfreejhm.com/");
 }, 300000); 
 
 
