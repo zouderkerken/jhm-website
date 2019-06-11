@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['evfree-jhm-website'],
+  app_name: ['evfree jhm website'],
   /**
    * Your New Relic license key.
    */
