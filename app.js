@@ -9,6 +9,12 @@ const expressValidator = require("express-validator");
 const flash = require("connect-flash");
 const session = require("express-session");
 
+//keep from sleeping
+var http = require("http");
+setInterval(function() {
+    http.get("http://http://www.evfreejhm.com/");
+}, 300000); 
+
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
